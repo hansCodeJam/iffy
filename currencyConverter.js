@@ -1,33 +1,116 @@
-//Currency Converter
-
-function main() {
-    //dollars To Euros Converter
-    function dollarsToEurosConverter(amount) {
-        return amount * 0.91;
-    }
-
-    //euros to dollars converter
-    function eurosToDollarsConverter(amount) {
-        return amount * 1.10;
-    }
+console.log('Hello fellow traveler');
+const readline = require('readline-sync');
+let userCurrency = readline.question('What currency do you currently have? Type "USD", "EUR", "JPY", "GPB", "AUD"\n');
+let currency = readline.question('What currency would like to convert? Type "USD" , "EUR", "JPY", "GDP", "AUD" \n');
+let userValue = readline.question(`Your converting (${userCurrency.toUpperCase()}) -> (${currency.toUpperCase()}). What is your current value of your currency (${userCurrency.toUpperCase()})?\n`);
+let result;
+let message = "You currently have ";
 
 
-    console.log('Hello fellow traveler');
-    let userInput = prompt('Press D for Dollars to Euros, Press E for Euros to Dollars');
-
-    if (userInput.toUpperCase() === 'd') {
-    //if yes
-        let amountDollars = prompt('OK, please input your amount of dollars to be converted');
-        console.log("You have " + dollarsToEurosConverter(amountDollars) + "Euros");
-    } else if (userInput.toUpperCase() === 'e' ) {
-        let amountEuros = prompt('Ok, please input your amout of Euros to be converted');
-        console.log(eurosToDollarsConverter(amountEuros));
-    } else {
-        console.log('Your input is invalid')
-    }
+if (userCurrency.toUpperCase() === "USD" && currency.toUpperCase() === "USD") {
+    result = userValue * 1;
+    console.log(message + result.toFixed(2) + " USD")
+} if (userCurrency.toUpperCase() === "USD" && currency.toUpperCase() === "EUR") {
+    result = userValue * 0.88;
+    console.log(message + result.toFixed(2) + " EUR")
+} if (userCurrency.toUpperCase() === "USD" && currency.toUpperCase() === "AUD") {
+    result = userValue * 1.37;
+    console.log(message + result.toFixed(2) + " AUD")
+} if (userCurrency.toUpperCase() === "USD" && currency.toUpperCase() === "GBP") {
+    result = userValue * 0.69;
+    console.log(message + result.toFixed(2) + " GBP")
+} if (userCurrency.toUpperCase() === "USD" && currency.toUpperCase() === "JPY") {
+    result = userValue * 108.96;
+    console.log(message + result.toFixed(2) + " JPY")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "EUR") {
+    result = userValue * 1;
+    console.log(message + result.toFixed(2) + " EUD")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "USD") {
+    result = userValue * 1.13;
+    console.log(message + result.toFixed(2) + " USD")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "AUD") {
+      result = userValue * 1.55;
+    console.log(message + result.toFixed(2) + " AUD")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "GBP") {
+      result = userValue * 0.70;
+    console.log(message + result.toFixed(2) + " GBP")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "JPY")  {
+      result = userValue * 123.47;
+    console.log(message + result.toFixed(2) + " JPY")
+} if ((userCurrency.toUpperCase() === "EUR") && (currency.toUpperCase() === "EUR"))  {
+      result = userValue * 1;
+    console.log(message + result.toFixed(2) + " EUD")
+} if ((userCurrency.toUpperCase() === "EUR") && (currency.toUpperCase() === "USD"))  {
+      result = userValue * 1;
+    console.log(message + result.toFixed(2) + " USD")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "AUD")  {
+      result = userValue * 1.55;
+    console.log(message + result.toFixed(2) + " AUD")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "GBP")  {
+      result = userValue * 0.79;
+    console.log(message + result.toFixed(2) + " GBP")
+} if (userCurrency.toUpperCase() === "EUR" && currency.toUpperCase() === "JPY")  {
+      result = userValue * 123.47;
+    console.log(message + result.toFixed(2) + " JPY")
+} if (userCurrency.toUpperCase() === "GPB" && currency.toUpperCase() === "EUR")  {
+      result = userValue * 1.27;
+    console.log(message + result.toFixed(2) + " EUR")
+} if (userCurrency.toUpperCase() === "GPB" && currency.toUpperCase() === "USD")  {
+      result = userValue * 1.44;
+    console.log(message + result.toFixed(2) + " USD")
+} if (userCurrency.toUpperCase() === "GPB" && currency.toUpperCase() === "AUD")  {
+      result = userValue * 1.98;
+    console.log(message + result.toFixed(2) + " AUD")
+} if (userCurrency.toUpperCase() === "GPB" && currency.toUpperCase() === "GBP")  {
+      result = userValue * 1;
+    console.log(message + result.toFixed(2) + " GBP")
+} if (userCurrency.toUpperCase() === "GPB" && currency.toUpperCase() === "JPY")  {
+      result = userValue * 157.08;
+    console.log(message + result.toFixed(2) + " JPY")
+} if (userCurrency.toUpperCase() === "AUD" && currency.toUpperCase() === "EUR")  {
+      result = userValue * 0.64;
+    console.log(message + result.toFixed(2) + " EUR")
+} if (userCurrency.toUpperCase() === "AUD" && currency.toUpperCase() === "USD")  {
+      result = userValue * 0.73;
+    console.log(message + result.toFixed(2) + " USD")
+} if (userCurrency.toUpperCase() === "AUD" && currency.toUpperCase() === "AUD")  {
+      result = userValue * 1;
+    console.log(message + result.toFixed(2) + " AUD")
+} if (userCurrency.toUpperCase() === "AUD" && currency.toUpperCase() === "GBP")  {
+      result = userValue * 0.51;
+    console.log(message + result.toFixed(2) + " GBP")
+} if (userCurrency.toUpperCase() === "AUD" && currency.toUpperCase() === "JPY")  {
+      result = userValue * 1;
+    console.log(message + result.toFixed(2) + " JPY")
+} if (userCurrency.toUpperCase() === "JPY" && currency.toUpperCase() === "EUR")  {
+      result = userValue * .0081;
+    console.log(message + result.toFixed(2) + " EUR")
+} if (userCurrency.toUpperCase() === "JPY" && currency.toUpperCase() === "USD")  {
+      result = userValue * 0.0092;
+    console.log(message + result.toFixed(2) + " USD")
+} if (userCurrency.toUpperCase() === "JPY" && currency.toUpperCase() === "AUD")  {
+      result = userValue * 0.013;
+    console.log(message + result.toFixed(2) + " AUD")
+} if (userCurrency.toUpperCase() === "JPY" && currency.toUpperCase() === "GBP")  {
+      result = userValue * 0.0064;
+    console.log(message + result.toFixed(2) + " GBP")
+} if (userCurrency.toUpperCase() === "JPY" && currency.toUpperCase() === "JPY")  {
+      result = userValue * 1;
+    console.log(message + result.toFixed(2) + " JPY")
 }
 
-let proc
+// if (userInput.toLowerCase() === 'd') {
+//     let amountDollars = readline.question('Please input your amount of dollars to be converted\n $');
+//     let conversionEuro = dollarsToEurosConverter(amountDollars);
+//     console.log("You have " + "€" + conversionEuro.toFixed(2) + " Euros");
+// } else if (userInput.toLowerCase() === 'e' ) {
+//     let amountEuros = readline.question('Please input your amount of Euros to be converted\n €');
+//     let conversionDollar = eurosToDollarsConverter(amountEuros);
+//     console.log("You have " + "$" + conversionDollar.toFixed(2) + " Dollars");
+// } else {
+//     console.log('Your input is invalid')
+// }
+
 
 
 
