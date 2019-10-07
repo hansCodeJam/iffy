@@ -6,9 +6,15 @@
 
 // console.log("Hi " + name + ", nice to meet you.");
 
-var sum = 0;
-for (i = 2; i < process.argv.length; i++) {
-	sum += Number(process.argv[i]);
-}
 
-console.log(sum);
+
+
+
+
+
+// var sum = 0;
+// for (i = 2; i < process.argv.length; i++) {
+// 	sum += Number(process.argv[i]);
+// }
+
+// console.log(sum);
