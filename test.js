@@ -1,10 +1,10 @@
-// //npm install readline-sync
+//npm install readline-sync
+//https://teamtreehouse.com/community/how-to-get-input-in-the-console-in-nodejs
+var readline = require('readline-sync');
 
-// var readline = require('readline-sync');
+var name = readline.question("What is your name?");
 
-// var name = readline.question("What is your name?");
-
-// console.log("Hi " + name + ", nice to meet you.");
+console.log("Hi " + name + ", nice to meet you.");
 
 
 

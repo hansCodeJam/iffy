@@ -3,8 +3,6 @@ const readline = require('readline-sync');
 
 //main function
 function main() {
-  
-  console.log('Hello fellow traveler');
   //let
   let userCurrency = readline.question('What is your current currency? Type "USD", "EUR", "JPY", "GBP", "AUD"\n');
   let currency = readline.question('What currency would like to convert to? Type "USD" , "EUR", "JPY", "GBP", "AUD" \n');
@@ -14,7 +12,7 @@ function main() {
   const message = "You currently have ";
   const userCurrencyUpperCase = userCurrency.toUpperCase();
   const currencyUpperCase = currency.toUpperCase();
-  const resultFixedTwo = result.toFixed(2);
+  const resultFixedTwo = result.toFixed(2); 
 
   //if function
   function ifFunc(){
@@ -48,10 +46,10 @@ function main() {
     } else if (userCurrencyUpperCase === "EUR" && currencyUpperCase === "JPY")  {
         result = userValue * 123.47;
         console.log(message + resultFixedTwo + " JPY")
-    } else if ((userCurrencyUpperCase === "EUR") && (currencyUpperCase === "EUR"))  {
+    } else if (userCurrencyUpperCase === "EUR" && currencyUpperCase === "EUR")  {
         result = userValue * 1;
         console.log(message + resultFixedTwo + " EUD")
-    } else if ((userCurrencyUpperCase === "EUR") && (currencyUpperCase === "USD"))  {
+    } else if (userCurrencyUpperCase === "EUR" && currencyUpperCase === "USD")  {
         result = userValue * 1;
         console.log(message + resultFixedTwo + " USD")
     } else if (userCurrencyUpperCase === "EUR" && currencyUpperCase === "AUD")  {
